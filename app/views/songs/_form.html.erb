@@ -1,0 +1,12 @@
+<h2>New Song</h2>
+<%= flash[:errors] if flash[:errors] %>
+<%= form_for(@song) do |s| %>
+<%= s.text_field :title %>
+<%= s.text_field :genre %>
+<%= s.text_field :artist_name %>
+<%= s.check_box :released, {}, "true", "false" %>
+<%= s.text_field :release_year %>
+<%= s.submit %>
+<% end %>
+
+
